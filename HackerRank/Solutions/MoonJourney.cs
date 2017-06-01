@@ -17,11 +17,12 @@ namespace HackerRank.Solutions
         {
             double sum = 0;
             Dictionary<string, HashSet<string>> rawMap = BuildRawMap(inputLines);
-            Dictionary<string, HashSet<string>> depthFirstSearchMap = new Dictionary<string, HashSet<string>>();
             List<HashSet<string>> depthFirstSearchList = new List<HashSet<string>>();
 
-            ProcessMap(rawMap, depthFirstSearchMap);
+            Dictionary<string, HashSet<string>> depthFirstSearchMap =
+                AlgorithmUtility.BuildCompleteRelationsMap(rawMap);
 
+       
             foreach (var entry in depthFirstSearchMap)
             {
                 HashSet<string> h = new HashSet<string>();
@@ -132,83 +133,7 @@ namespace HackerRank.Solutions
 
         }
 
-        private static void Print(Dictionary<string, HashSet<string>> map)
-        {
-            foreach (KeyValuePair<string, HashSet<string>> entry in map)
-            {
-                Console.WriteLine(String.Format("{0}->{1}", entry.Key, ToString(map[entry.Key])));
-            }
-        }
-
-        private static string ToString(IEnumerable<string> h, string delim = null)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (string s in h)
-            {
-                sb.Append(s).Append(delim != null ? delim : " ");
-            }
-            return sb.ToString();
-        }
-
-
-        private static string ToString(List<int> h)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (int s in h)
-            {
-                sb.Append(s).Append(" ");
-            }
-            return sb.ToString();
-        }
-
-        private static void Add2Map(Dictionary<string, HashSet<string>> map, string key, string value)
-        {
-            HashSet<string> values;
-            if (map.ContainsKey(key))
-            {
-                values = map[key];
-            }
-            else
-            {
-
-                values = new HashSet<string>();
-            }
-            values.Add(value);
-            map[key] = values;
-        }
-
-
-        private static void ProcessMap(Dictionary<string, HashSet<string>> map, Dictionary<string, HashSet<string>> sumMap)
-        {
-
-            foreach (KeyValuePair<string, HashSet<string>> entry in map)
-            {
-                string key = entry.Key;
-                HashSet<string> children = map[key];
-                foreach (string s in children)
-                {
-                    Add2Map(sumMap, key, s);
-                    ProcessMapInner(map, key, s, sumMap);
-                }
-            }
-        }
-
-
-        private static void ProcessMapInner(Dictionary<string, HashSet<string>> map, string parent, string child, Dictionary<string, HashSet<string>> sumMap)
-        {
-            if (map.ContainsKey(child))
-            {
-
-                HashSet<string> children = map[child];
-                foreach (string ss in children)
-                {
-                    Add2Map(sumMap, parent, ss);
-                    ProcessMapInner(map, parent, ss, sumMap);
-                }
-            }
-
-        }
-
+    
         private static Dictionary<string, HashSet<string>> BuildRawMap(string[] lines)
         {
 
@@ -217,7 +142,7 @@ namespace HackerRank.Solutions
             for (int i = 0; i < lines.Length; ++i)
             {
                 string[] members = lines[i].Split(' ');
-                Add2Map(map, members[0], members[1]);
+                AlgorithmUtility.Add2Map(map, members[0], members[1]);
             }
 
             return map;
