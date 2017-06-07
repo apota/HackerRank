@@ -12,7 +12,7 @@ namespace HackerRank.Solutions
         /// Recusrively traverse a map of key value pairs to find "complete" relationships using depth first search.
  
         /// Assumption: values of the map are "related" to the corresponding map key. The values themselves can be keys to some other
-        /// set of values. The purpose of this method is to unravel those connections starting from begin to finish and store them in a
+        /// set of values (i.e. could have relations of their own). The purpose of this method is to unravel those relations starting from begin to finish and store them in a
         /// flattened map.
         /// 
         /// Data is assumed to NOT HAVE LOOPS! (no cyclical data checks made).  
@@ -51,6 +51,22 @@ namespace HackerRank.Solutions
             {
 
                 values = new HashSet<string>();
+            }
+            values.Add(value);
+            map[key] = values;
+        }
+
+        public static void Add2Map(Dictionary<string, List<string>> map, string key, string value)
+        {
+            List<string> values;
+            if (map.ContainsKey(key))
+            {
+                values = map[key];
+            }
+            else
+            {
+
+                values = new List<string>();
             }
             values.Add(value);
             map[key] = values;

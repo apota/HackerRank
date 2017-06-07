@@ -11,8 +11,9 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            ConsoleInput.FetchInput();            
-            MoonJourney.Run(ConsoleInput.N, ConsoleInput.InputLines);
+//            FileInput.FetchInput();
+//            MoonJourney.Run(ConsoleInput.N, ConsoleInput.InputLines);
+                ValidString.Run();
         }
 
 

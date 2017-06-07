@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\AlgorithmUtility.cs" />
     <Compile Include="Solutions\MoonJourney.cs" />
+    <Compile Include="Solutions\ValidString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
