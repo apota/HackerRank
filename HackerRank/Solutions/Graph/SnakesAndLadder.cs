@@ -77,7 +77,7 @@ namespace HackerRank.Solutions.Graph
             Dictionary<string, double> distances = new Dictionary<string, double>();
             Dictionary<string, string> paths = new Dictionary<string, string>();
 
-            g.Djkistra("1", "100", out distances, out paths);
+            g.Djkistra("1", out distances, out paths);
 
             Console.WriteLine(distances["100"]);
 

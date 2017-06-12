@@ -47,6 +47,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\AlgorithmUtility.cs" />
+    <Compile Include="Solutions\Graph\Edge.cs" />
+    <Compile Include="Solutions\Graph\Graph.cs" />
     <Compile Include="Solutions\Graph\MoonJourney.cs" />
     <Compile Include="Solutions\Graph\SnakesAndLadder.cs" />
     <Compile Include="Solutions\Strings\AlternatingChars.cs" />

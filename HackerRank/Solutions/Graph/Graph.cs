@@ -26,10 +26,9 @@ namespace HackerRank.Solutions.Graph
         /// 
         /// </summary>
         /// <param name="sourceVertex">Vertex to calculate the path from</param>
-        /// <param name="destinationVertex">Vertex to calculate the path to</param>
         /// <param name="shortestDistances">Map of vertices and their shortest distances to them</param>
         /// <param name="shortestPaths">Map of vertices and the node leading to them in a shortest path</param>
-        public void  Djkistra(string sourceVertex, string destinationVertex, out Dictionary<string, double> shortestDistances, out Dictionary<string, string> shortestPaths)
+        public void  Djkistra(string sourceVertex, out Dictionary<string, double> shortestDistances, out Dictionary<string, string> shortestPaths)
         {
             List<string> queue = new List<string>();
             shortestDistances = new Dictionary<string, double>();
