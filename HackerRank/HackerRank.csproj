@@ -48,11 +48,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\AlgorithmUtility.cs" />
     <Compile Include="Solutions\Graph\MoonJourney.cs" />
+    <Compile Include="Solutions\Graph\SnakesAndLadder.cs" />
+    <Compile Include="Solutions\Strings\AlternatingChars.cs" />
+    <Compile Include="Solutions\Strings\CamelCase.cs" />
+    <Compile Include="Solutions\Strings\FunnyString.cs" />
+    <Compile Include="Solutions\Strings\GameOfThrones.cs" />
+    <Compile Include="Solutions\Strings\HackerRankInString.cs" />
+    <Compile Include="Solutions\Strings\LoveLetterMystery.cs" />
+    <Compile Include="Solutions\Strings\MakingAnagrams.cs" />
+    <Compile Include="Solutions\Strings\Pangrams.cs" />
+    <Compile Include="Solutions\Strings\TwoStrings.cs" />
     <Compile Include="Solutions\Strings\ValidString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Solutions\Recursion\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
