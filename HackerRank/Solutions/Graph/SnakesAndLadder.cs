@@ -76,7 +76,7 @@ namespace HackerRank.Solutions.Graph
             g.edges = edges;
             g.vertices = vertices;
 
-            g.doit();
+            g.CalculateDjkistraShortestPath();
 
         }
 
@@ -105,7 +105,7 @@ namespace HackerRank.Solutions.Graph
         public List<Edge> edges;
 
 
-        public void doit()
+        public void CalculateDjkistraShortestPath()
         {
             List<string> Q = new List<string>();
             Dictionary<string, int> dist = new Dictionary<string, int>();
