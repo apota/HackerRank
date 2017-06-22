@@ -33,7 +33,7 @@ public class Gemstones
         // Complete this function
     }
 
-    static void Main(String[] args)
+    public static void Run(String[] args)
     {
         int n = Convert.ToInt32(Console.ReadLine());
         string[] arr = new string[n];
