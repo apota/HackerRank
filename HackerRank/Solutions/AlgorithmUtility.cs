@@ -8,16 +8,7 @@ namespace HackerRank.Solutions
 {
     public static class AlgorithmUtility
     {
-        /// <summary>
-        /// Recusrively traverse a map of key value pairs to find "complete" relationships using depth first search.
- 
-        /// Assumption: values of the map are "related" to the corresponding map key. The values themselves can be keys to some other
-        /// set of values (i.e. could have relations of their own). The purpose of this method is to unravel those relations starting from begin to finish and store them in a
-        /// flattened map.
-        /// 
-        /// Data is assumed to NOT HAVE LOOPS! (no cyclical data checks made).  
-        /// </summary>
-        /// <param name="lines"></param>
+        #region Dictionary stuff
         public static Dictionary<string, HashSet<string>> BuildCompleteRelationsMap(Dictionary<string, HashSet<string>> rawMap)
         {
             Dictionary<string, HashSet<string>> resultMap = new Dictionary<string, HashSet<string>>();
@@ -72,7 +63,6 @@ namespace HackerRank.Solutions
             map[key] = values;
         }
 
-
         private static void ProcessMapInner(Dictionary<string, HashSet<string>> map, string parent, string child, Dictionary<string, HashSet<string>> sumMap)
         {
             if (map.ContainsKey(child))
@@ -88,6 +78,7 @@ namespace HackerRank.Solutions
 
         }
 
+        #endregion
 
 
         #region Printing 
@@ -101,8 +92,6 @@ namespace HackerRank.Solutions
             }
             return sb.ToString();
         }
-
-
         public static string ToString(List<int> h)
         {
             StringBuilder sb = new StringBuilder();
@@ -113,8 +102,106 @@ namespace HackerRank.Solutions
             return sb.ToString();
         }
 
+        #endregion
+
+        #region String ops
+
+        public static bool IsAnagram(string a, string b)
+        {
+            if (a.Length != b.Length) return false;
+
+            char[] aarr = a.ToCharArray();
+            char[] barr = b.ToCharArray();
+            Array.Sort(aarr);
+            Array.Sort(barr);
+
+
+            for (int i = 0; i < aarr.Length; ++i)
+            {
+                if (aarr[i] != barr[i]) return false;
+            }
+
+            return true;
+
+        }
+
+        public static int EditDistance(string s, string t)
+        {
+            int n = s.Length;
+            int m = t.Length;
+            int[,] d = new int[n + 1, m + 1];
+
+            // Step 1
+            if (n == 0)
+            {
+                return m;
+            }
+
+            if (m == 0)
+            {
+                return n;
+            }
+
+            // Step 2
+            for (int i = 0; i <= n; d[i, 0] = i++)
+            {
+            }
+
+            for (int j = 0; j <= m; d[0, j] = j++)
+            {
+            }
+
+            // Step 3
+            for (int i = 1; i <= n; i++)
+            {
+                //Step 4
+                for (int j = 1; j <= m; j++)
+                {
+                    // Step 5
+                    int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
+
+                    // Step 6
+                    d[i, j] = Math.Min(
+                        Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                        d[i - 1, j - 1] + cost);
+                }
+            }
+            // Step 7
+            return d[n, m];
+        }
 
         #endregion
+
+
+        #region Combinatorics 
+
+
+        public static List<List<T>> Permutations<T>(List<T> list)
+        {
+            List<List<T>> result = new List<List<T>>();
+            if (list.Count == 1)
+            { // If only one possible permutation
+                result.Add(list); // Add it and return it
+                return result;
+            }
+            foreach (T element in list)
+            { // For each element in that list
+                var remainingList = new List<T>(list);
+                remainingList.Remove(element); // Get a list containing everything except of chosen element
+                foreach (List<T> permutation in Permutations<T>(remainingList))
+                { // Get all possible sub-permutations
+                    permutation.Add(element); // Add that element
+                    result.Add(permutation);
+                }
+            }
+            return result;
+        }
+
+      
+        #endregion
+
+
+
 
     }
 }
