@@ -43,6 +43,13 @@ namespace HackerRank.Solutions.Recursion.Crossword
 
         public string CurrentWord { get; set; }
 
+        /// <summary>
+        /// A Slot A is compatible with slot B 
+        ///     1. If A and B do not intersect (they are both vertical or horizontal)
+        ///     2. If A and B intersect than the intersection point is a character that exists in both words.
+        /// </summary>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public bool Compatible(Slot y)
         {
 

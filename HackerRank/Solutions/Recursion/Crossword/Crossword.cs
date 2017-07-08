@@ -26,7 +26,7 @@ namespace HackerRank.Solutions.Recursion.Crossword
             }
 
 
-            List<string> words  = "AGRA;NORWAY;ENGLAND;GWALIOR".Split(';').ToList();
+            List<string> words  = "TREE;ELEPHANTS;PICKLE;LEMON".Split(';').ToList();
             Grid g = new Grid(data, words);
 
             g.Solve();

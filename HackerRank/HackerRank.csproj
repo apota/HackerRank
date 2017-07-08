@@ -51,10 +51,15 @@
     <Compile Include="Solutions\Graph\Graph.cs" />
     <Compile Include="Solutions\Graph\MoonJourney.cs" />
     <Compile Include="Solutions\Graph\SnakesAndLadder.cs" />
+    <Compile Include="Solutions\Recursion\Crossword\Crossword.cs" />
+    <Compile Include="Solutions\Recursion\Crossword\Grid.cs" />
+    <Compile Include="Solutions\Recursion\Crossword\Slot.cs" />
+    <Compile Include="Solutions\Recursion\Crossword\SlotType.cs" />
     <Compile Include="Solutions\Strings\AlternatingChars.cs" />
     <Compile Include="Solutions\Strings\CamelCase.cs" />
     <Compile Include="Solutions\Strings\FunnyString.cs" />
     <Compile Include="Solutions\Strings\GameOfThrones.cs" />
+    <Compile Include="Solutions\Strings\Gemstones.cs" />
     <Compile Include="Solutions\Strings\HackerRankInString.cs" />
     <Compile Include="Solutions\Strings\LoveLetterMystery.cs" />
     <Compile Include="Solutions\Strings\MakingAnagrams.cs" />
@@ -65,8 +70,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Solutions\Recursion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

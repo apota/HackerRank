@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HackerRank.Solutions;
 using HackerRank.Solutions.Graph;
+using HackerRank.Solutions.Recursion;
+using HackerRank.Solutions.Recursion.Crossword;
 using HackerRank.Solutions.Strings;
 
 namespace HackerRank
@@ -16,17 +18,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            //            FileInput.FetchInput();
-            //            MoonJourney.Run(ConsoleInput.N, ConsoleInput.InputLines);
-
-            //                ValidString.Run();
-            //                TwoStrings.Run();
-
-            SnakesAndLadder.Run();
-
-
-
-            //hold hold hold strong strong hold hold hold hold hold hold hold strong strong hold hold hold strong hold hold strong strong strong hold strong hold hold strong strong hold hold hold hold strong hold strong hold hold strong strong hold hold strong hold strong hold hold hold hold strong hold hold hold strong strong hold hold strong hold strong strong hold hold hold hold hold hold hold hold hold hold strong hold strong hold strong hold strong hold hold hold hold hold hold hold hold strong hold strong strong hold strong strong hold hold hold hold strong strong hold hold strong hold strong strong strong hold hold strong strong hold hold hold hold hold hold strong strong hold hold strong hold strong hold hold hold strong hold hold hold strong hold strong hold strong strong strong strong strong hold strong hold hold strong hold strong hold hold strong hold strong strong strong hold hold strong hold strong hold hold hold strong strong hold strong hold hold hold strong hold hold strong hold strong hold hold strong strong hold strong strong hold hold strong hold strong hold strong strong hold strong hold strong hold hold hold hold strong strong hold hold hold strong strong hold strong hold hold hold hold hold strong strong hold hold strong strong hold hold hold hold strong hold hold strong hold hold strong hold strong hold hold hold strong hold strong hold strong hold hold strong hold hold hold hold strong hold strong hold strong hold hold hold hold strong hold strong hold hold hold hold strong hold hold hold hold hold hold hold strong hold strong hold hold strong hold strong strong strong hold hold hold strong strong strong hold hold strong hold hold strong hold hold hold strong hold hold strong strong hold hold strong hold hold hold hold strong hold hold strong strong hold hold hold hold hold strong hold hold hold strong hold hold hold hold hold strong strong hold hold strong hold strong hold hold strong strong hold hold strong hold hold hold hold hold hold strong strong hold strong hold hold strong hold hold hold strong hold hold hold hold hold strong hold strong hold strong strong hold hold strong hold strong strong hold strong hold hold strong hold strong hold hold hold hold hold strong hold hold strong hold strong hold strong hold hold strong hold hold hold strong hold hold hold hold hold strong hold strong hold hold strong hold strong strong hold hold strong hold strong hold strong
+            Crossword.Run();
         }
 
 
