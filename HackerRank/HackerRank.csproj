@@ -55,6 +55,7 @@
     <Compile Include="Solutions\Recursion\Crossword\Grid.cs" />
     <Compile Include="Solutions\Recursion\Crossword\Slot.cs" />
     <Compile Include="Solutions\Recursion\Crossword\SlotType.cs" />
+    <Compile Include="Solutions\Recursion\RecursiveSumDigit.cs" />
     <Compile Include="Solutions\Strings\AlternatingChars.cs" />
     <Compile Include="Solutions\Strings\CamelCase.cs" />
     <Compile Include="Solutions\Strings\FunnyString.cs" />
