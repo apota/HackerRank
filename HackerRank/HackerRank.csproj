@@ -51,6 +51,7 @@
     <Compile Include="Solutions\Graph\Graph.cs" />
     <Compile Include="Solutions\Graph\MoonJourney.cs" />
     <Compile Include="Solutions\Graph\SnakesAndLadder.cs" />
+    <Compile Include="Solutions\Implementation\ChocolateFeast.cs" />
     <Compile Include="Solutions\Recursion\Crossword\Crossword.cs" />
     <Compile Include="Solutions\Recursion\Crossword\Grid.cs" />
     <Compile Include="Solutions\Recursion\Crossword\Slot.cs" />
