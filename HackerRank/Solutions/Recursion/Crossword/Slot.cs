@@ -68,11 +68,11 @@ namespace HackerRank.Solutions.Recursion.Crossword
                 string yFrag = null;
                 string xFrag = null;
 
-                if (FixedValue > y.Start && y.CurrentWord.Length >= FixedValue - y.Start)
+                if (FixedValue >= y.Start && y.CurrentWord.Length >= FixedValue - y.Start)
                 {
                     yFrag = y.CurrentWord.Substring(FixedValue - y.Start, 1);
                 }
-                if (y.FixedValue > Start && CurrentWord.Length >= y.FixedValue - Start)
+                if (y.FixedValue >= Start && CurrentWord.Length >= y.FixedValue - Start)
                 {
                     xFrag = CurrentWord.Substring(y.FixedValue - Start, 1);
                 }

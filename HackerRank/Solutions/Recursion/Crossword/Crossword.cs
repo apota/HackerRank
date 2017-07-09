@@ -30,7 +30,7 @@ namespace HackerRank.Solutions.Recursion.Crossword
             char[,] data = new char[10, 10];
             for (int i = 0; i < filelines.Length; ++i)
             {
-                char[] arr = filelines[i].ToCharArray();
+                char[] arr = filelines[i].ToCharArray(); 
                 for (int j = 0; j < arr.Length; ++j)
                 {
                     data[i, j] = arr[j];
@@ -38,7 +38,7 @@ namespace HackerRank.Solutions.Recursion.Crossword
             }
 
 
-            List<string> words  = "TREE;ELEPHANTS;PICKLE;LEMON".Split(';').ToList();
+            List<string> words  = "CALIFORNIA;LASVEGAS;NIGERIA;CANADA;TELAVIV;ALASKA".Split(';').ToList();
             Grid g = new Grid(data, words);
 
             g.Solve();
