@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using HackerRank.Solutions.Util;
 
 namespace HackerRank.Solutions.Recursion.Crossword
 {
@@ -28,7 +29,7 @@ namespace HackerRank.Solutions.Recursion.Crossword
         public void Solve()
         {
             //This is the recursion part...
-            List<List<string>> wordCombos = AlgorithmUtility.Permutations(words);
+            List<List<string>> wordCombos = CombinatoricsUtility.Permutations(words);
 
             //Try each word combo with the slot list
             foreach (List<string> wordCombo in wordCombos)

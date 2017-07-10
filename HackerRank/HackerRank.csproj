@@ -46,7 +46,7 @@
     <Compile Include="FileInput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Solutions\AlgorithmUtility.cs" />
+    <Compile Include="Solutions\Util\AlgorithmUtility.cs" />
     <Compile Include="Solutions\Graph\Edge.cs" />
     <Compile Include="Solutions\Graph\Graph.cs" />
     <Compile Include="Solutions\Graph\MoonJourney.cs" />
@@ -68,6 +68,7 @@
     <Compile Include="Solutions\Strings\Pangrams.cs" />
     <Compile Include="Solutions\Strings\TwoStrings.cs" />
     <Compile Include="Solutions\Strings\ValidString.cs" />
+    <Compile Include="Solutions\Util\CombinatoricsUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
